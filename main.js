@@ -66,13 +66,13 @@ nextTwo.onclick = function() {
   nextThree.hidden = false;
   nextTwo.hidden = true;
 
-  document.getElementById("word-five").innerHTML = "DEAR";
-  document.getElementById("word-six").innerHTML = "FRI-";
+  document.getElementById("word-five").innerText = "DEAR";
+  document.getElementById("word-six").innerText = "FRI-";
 
-  document.getElementById("letter-note-three").innerHTML = "G";
-  document.getElementById("letter-note-four").innerHTML = "E";
-  document.getElementById("letter-note-five").innerHTML = "C";
-  document.getElementById("letter-note-six").innerHTML = "B";
+  document.getElementById("letter-note-three").innerText = "G";
+  document.getElementById("letter-note-four").innerText = "E";
+  document.getElementById("letter-note-five").innerText = "C";
+  document.getElementById("letter-note-six").innerText = "B";
 
   lastLyric.style.display = "inline-block";
 };
@@ -81,15 +81,15 @@ nextThree.onclick = function() {
   startOver.hidden = false;
   nextThree.hidden = true;
 
-  document.getElementById("word-five").innerHTML = "TO";
-  document.getElementById("word-six").innerHTML = "YOU!";
+  document.getElementById("word-five").innerText = "TO";
+  document.getElementById("word-six").innerText = "YOU!";
 
-  document.getElementById("letter-note-one").innerHTML = "F";
-  document.getElementById("letter-note-two").innerHTML = "F";
-  document.getElementById("letter-note-three").innerHTML = "E";
-  document.getElementById("letter-note-four").innerHTML = "C";
-  document.getElementById("letter-note-five").innerHTML = "D";
-  document.getElementById("letter-note-six").innerHTML = "C";
+  document.getElementById("letter-note-one").innerText = "F";
+  document.getElementById("letter-note-two").innerText = "F";
+  document.getElementById("letter-note-three").innerText = "E";
+  document.getElementById("letter-note-four").innerText = "C";
+  document.getElementById("letter-note-five").innerText = "D";
+  document.getElementById("letter-note-six").innerText = "C";
 
   lastLyric.style.display = "none";
 };
