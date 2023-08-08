@@ -20,24 +20,39 @@ keys.forEach(function (key) {
 });
 
 // Write named functions that change the color of the keys below
-function keyPlay(note, color) {
-  note.style.backgroundColor = color
-}
 
-function keyReturn(note, color) {
-  note.style.backgroundColor = color
-}
+// function keyPlay(note, color) {
+//   note.style.backgroundColor = color
+// }
 
-notes.forEach(function(note){
-  // initialColor = note.style.backgroundColor
-  note.addEventListener ('mousedown',function(){keyPlay(note, 'grey')})
-  note.addEventListener ('mouseup',function(){keyReturn(note, "")})
-});
+// function keyReturn(note, color) {
+//   note.style.backgroundColor = color
+// }
+
+// notes.forEach(function(note){
+//   // initialColor = note.style.backgroundColor
+//   note.addEventListener ('mousedown',function(){keyPlay(note, 'grey')})
+//   note.addEventListener ('mouseup',function(){keyReturn(note, "")})
+// });
+
+const keyPlay = function(event){
+  event.target.style.backgroundColor = "#fd4d3f";
+};
+const keyReturn = function (event) {
+  event.target.style.backgroundColor = '';
+};
 
 // Write a named function with event handler properties
-
+let colorChanger = function(note) {
+  note.onmousedown = () => {
+    keyPlay(event);
+  };
+  note.onmouseup = function(){
+    keyReturn(event);
+  };
+};
 // Write a loop that runs the array elements through the function
-
+notes.forEach(colorChanger);
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById("first-next-line");
 let nextTwo = document.getElementById("second-next-line");
